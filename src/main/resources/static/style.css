@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    max-width: 1240px;
+    margin: auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #191919;
+    margin: 0 auto;
+
+}
+.mainUp{
+    position: relative;
+    background-color: #191919;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20vh;
+    width: 60%;
+    align-items: center;
+    line-height: 10vh;
+    z-index: 1;
+    text-shadow: 0 0 4px black;
+    font-size: 8vh;
+    padding-top: 3vh;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 2px;
+}
+
+.navi {
+
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 10vh;
+    height: 10vh;
+    font-size: 3vh;
+    background-color: black;
+    color: white;
+}
+.navi nav{
+    display: flex;
+    width: 80vw;
+    align-self: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.navi a{
+    display: flex;
+    flex-basis: 30%;
+    font-size: 3.5vh;
+    height: 7vh;
+    text-transform: uppercase;
+    justify-content: center;
+    padding-top: 1vh;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    color: aliceblue;
+    background-color: rgb(39, 39, 39);
+    text-decoration: none;
+
+
+}
+.navi a:hover {
+    border: white solid 2px;
+    background-color: #494949;
+    color: aliceblue;
+}
+
+
+.mainDown{
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 65vh;
+    width: 100%;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.671);
+    align-items: center;
+    overflow: auto;
+}
+
+.photoHeader{
+    height: 60vh;
+}
+
+.mainDownShow{
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    width: 100%;
+    justify-content:flex-start;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+.contentShowLoc{
+    margin: 15px 200px;
+    overflow: auto;
+}
+
+
+.locationModel{
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.locationModel p{
+    font-size: 20px;
+    position: relative;
+}
+
+.location-value{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vw;
+}
+.location-value2{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vw;
+}
+.weatherModel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.wea{
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 2vw 1vh 3vw;
+    width: 33%;
+}
+.wea p{
+    line-height: 5vh;
+}
+
+
+
+.location-info{
+    display: flex;
+    margin: 30px 50px 0 0;
+    width: 20vw;
+    padding: 10px;
+    font-size: 25px;
+
+    justify-content: center;
+}
+.fas{
+    color: rgb(119, 110, 110);
+    font-size: 7vh;
+    padding: 2vh;
+    align-self: center;
+}
+
+.edit{
+    display: flex;
+    margin-left: 3vw;
+
+}
+.remove{
+    display: flex;
+
+}
+.fas:hover{
+    color:  white;
+}
+.info{
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+
+}
+.contentAddLoc{
+    margin: 20px auto;
+    width: 500px;
+    padding: 0;
+    text-align: center;
+}
+.addLocation-form input{
+    display: block;
+}
+.text-input{
+    width: 100%;
+    margin :15px 0;
+    font-size: 20px;
+    text-align: center;
+
+}
+.form-submit {
+    width: 30%;
+    margin: 15px auto;
+    font-size: 18px;
+    background: white;
+    transition: color 1s, border 1s;
+    color: black;
+
+}
+
+.form-submit:hover {
+    cursor: pointer;
+    color: gray;
+    border: gray;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    flex-basis: 5vh;
+    background-color: #000;
+    color: white;
+    justify-content: center;
+    line-height: 5vh;
+    border-top: rgba(255, 255, 255, 0.5) 3px solid;
+    width: 100%;
+}

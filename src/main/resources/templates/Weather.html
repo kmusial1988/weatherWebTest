@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&family=Roboto+Slab:wght@100;400&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Weather Service -> Weather</title>
+</head>
+<body>
+<div class="mainView">
+    <div class="mainUp">
+        <div class="logo">
+            <p>Weather Service -> Weather</p>
+        </div>
+        <div class="navi">
+            <nav>
+
+                <a class="nav1" href="/All">Display location</a>
+                <a class="nav0" href="/Add"> Add location</a>
+                <a class="nav0" href="/weatherServiceMain"> Back</a>
+
+            </nav>
+        </div>
+    </div>
+    <div class="mainDownShow">
+        <div class="contentShowLoc">
+            <th:block th:each="weatherModelEntities : ${weathers}">
+                <div class="locationModel">
+
+                        <div class="wea">
+                          <p th:text="'City: '+${weatherModelEntities.getLocation().getCityName()}" class="city"></p>
+                           <p th:text="'temperature: '+${weatherModelEntities.temperature}" class="temperature"></p>
+                        </div>
+                        <div class="wea">
+                            <p th:text="'date: '+${weatherModelEntities.date}" class="date"></p>
+                            <p th:text="'pressure: '+${weatherModelEntities.pressure}" class="pressure"></p>
+                            <p th:text="'humidity: '+${weatherModelEntities.humidity}" class="humidity"></p>
+                        </div>
+                        <div class="wea">
+                            <p th:text="'windDir: '+${weatherModelEntities.windDir}" class="windDir"></p>
+                            <p th:text="'windSpeed: '+${weatherModelEntities.windSpeed}" class="windSpeed"></p>
+                        </div>
+                </div>
+            </th:block>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<footer> KK corporation</footer>
+
+</body>
+</html>

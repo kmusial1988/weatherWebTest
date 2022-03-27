@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&family=Roboto+Slab:wght@100;400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Weather Service -> </title>
+</head>
+<body>
+<div class="mainView">
+    <div class="mainUp">
+        <div class="logo">
+            <p>Weather Service -> Edit</p>
+        </div>
+        <div class="navi">
+            <nav>
+
+                <a class="nav1" href="/All">Display location</a>
+                <a class="nav2" href="/Weather">Show weather</a>
+                <a class="nav0" href="/weatherServiceMain"> Back</a>
+
+            </nav>
+        </div>
+    </div>
+    <div class="mainDownShow">
+        <div class="contentAddLoc">
+            <form method="post" class="addLocation-form">
+                <div th:if="${info !=null}" th:text ="${info}" class="info"></div>
+                <input type="text" placeholder="City name" class="text-input" th:field="${location.cityName}">
+                <input type="text" placeholder="Coordinate" class="text-input" th:field="${location.latitudeAndLongitude}">
+                <input type="text" placeholder="Region name" class="text-input" th:field="${location.region}">
+                <input type="text" placeholder="Country name" class="text-input" th:field="${location.countryName}">
+
+                <input type="submit" value="OK" class="form-submit" >
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<footer> KK corporation </footer>
+
+</body>
+</html>

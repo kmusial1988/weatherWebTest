@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&family=Roboto+Slab:wght@100;400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Weather Service</title>
+</head>
+<body>
+<div class="mainView">
+    <div class="mainUp">
+        <div class="logo">
+            <p>Weather Service -> All</p>
+        </div>
+        <div class="navi">
+            <nav>
+
+                <a class="nav0" href="/Add"> Add location</a>
+                <a class="nav2" href="/Weather">Show weather</a>
+                <a class="nav0" href="/weatherServiceMain"> Back</a>
+
+            </nav>
+        </div>
+    </div>
+    <div class="mainDownShow">
+        <div class="contentShowLoc">
+            <th:block th:each="locationModel : ${locations}">
+
+                <div class="locationModel">
+                    <div class="location-value">
+                        <p th:text="'City: '+${locationModel.cityName}" class="cityName"></p>
+                        <p th:text= "'Coordinates: '+${locationModel.latitudeAndLongitude}" class="latitudeAndLongitude"></p>
+                        <p th:text= "'Region: '+${locationModel.region}" class="region"></p>
+                        <p th:text= "'Country: '+${locationModel.countryName}" class="countryName"></p>
+                    </div>
+                    <div class="location-info" >
+
+                        <div class="location-info" >
+                            <a th:href="@{/Remove/{name}(name=${locationModel.cityName})} " class="remove"><i class="fas fa-recycle"></i></a>
+                            <a th:href="@{/Edit/{name}(name=${locationModel.cityName})} " class="edit"><i class="fas fa-keyboard"></i></a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </th:block>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<footer> KK corporation </footer>
+
+</body>
+</html>
