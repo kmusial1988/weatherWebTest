@@ -34,15 +34,18 @@ body{
     display: flex;
     flex-direction: column;
     flex-basis: 20vh;
-    width: 60%;
+    width: 80%;
     align-items: center;
     line-height: 10vh;
     z-index: 1;
     text-shadow: 0 0 4px black;
-    font-size: 8vh;
+    font-size: 10px;
     padding-top: 3vh;
     font-family: 'Roboto Slab', serif;
     letter-spacing: 2px;
+}
+.logo p{
+   font-size: 7vh;
 }
 
 .navi {
@@ -70,19 +73,17 @@ body{
 .navi a{
     display: flex;
     flex-basis: 30%;
-    font-size: 3.5vh;
     height: 7vh;
     text-transform: uppercase;
     justify-content: center;
-    padding-top: 1vh;
+    padding-top: 0.5vh;
     cursor: pointer;
     font-family: 'Roboto Slab', serif;
     color: aliceblue;
     background-color: rgb(39, 39, 39);
     text-decoration: none;
-
-
 }
+
 .navi a:hover {
     border: white solid 2px;
     background-color: #494949;
@@ -156,13 +157,13 @@ body{
     display: flex;
     flex-direction: row;
 }
-.wea{
+.weather{
+    width: 30vw;
     display: flex;
     flex-direction: column;
-    padding: 1vh 2vw 1vh 3vw;
-    width: 33%;
+    padding: 2vh 2vw;
 }
-.wea p{
+.weather p{
     line-height: 5vh;
 }
 
