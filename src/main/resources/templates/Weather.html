@@ -39,16 +39,18 @@
             <th:block th:each="weatherModelEntities : ${weathers}">
                 <div class="locationModel">
 
-                        <div class="wea">
+                        <div class="weather">
                           <p th:text="'City: '+${weatherModelEntities.getLocation().getCityName()}" class="city"></p>
-                           <p th:text="'temperature: '+${weatherModelEntities.temperature}" class="temperature"></p>
-                        </div>
-                        <div class="wea">
                             <p th:text="'date: '+${weatherModelEntities.date}" class="date"></p>
+
+                        </div>
+                        <div class="weather">
+
+                            <p th:text="'temperature: '+${weatherModelEntities.temperature}" class="temperature"></p>
                             <p th:text="'pressure: '+${weatherModelEntities.pressure}" class="pressure"></p>
                             <p th:text="'humidity: '+${weatherModelEntities.humidity}" class="humidity"></p>
                         </div>
-                        <div class="wea">
+                        <div class="weather">
                             <p th:text="'windDir: '+${weatherModelEntities.windDir}" class="windDir"></p>
                             <p th:text="'windSpeed: '+${weatherModelEntities.windSpeed}" class="windSpeed"></p>
                         </div>

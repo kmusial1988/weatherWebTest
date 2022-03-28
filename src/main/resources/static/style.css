@@ -34,7 +34,7 @@ body{
     display: flex;
     flex-direction: column;
     flex-basis: 20vh;
-    width: 60%;
+    width: 80%;
     align-items: center;
     line-height: 10vh;
     z-index: 1;
@@ -156,13 +156,13 @@ body{
     display: flex;
     flex-direction: row;
 }
-.wea{
+.weather{
+    width: 30vw;
     display: flex;
     flex-direction: column;
-    padding: 1vh 2vw 1vh 3vw;
-    width: 33%;
+    padding: 2vh 2vw;
 }
-.wea p{
+.weather p{
     line-height: 5vh;
 }
 
